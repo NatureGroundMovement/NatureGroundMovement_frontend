@@ -1,0 +1,64 @@
+﻿.workout-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+.workout-table th {
+    background-color: #d9d9d9;
+    color: #333;
+    font-weight: 600;
+    padding: 12px 14px;
+    font-size: 1.2rem;
+    border-right: 1px solid #fff;
+    width: 15%;
+    white-space: nowrap;
+}
+
+.workout-table th:last-child {
+    border-right: none;
+}
+
+.workout-table td {
+    background-color: #fff;
+    padding: 12px;
+    color: #333;
+    text-align: center;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+}
+
+.workout-table td:first-child {
+    font-weight: 500;
+    white-space: wrap;
+}
+
+.no-workout {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+    .workout-table th {
+        font-size: 12px;
+        padding: 7px;
+        font-weight: 500;
+    }
+    .workout-table td {
+        font-size: 12px;
+        padding: 7px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .workout-table th {
+        font-size: 16px;
+        padding: 10px;
+        font-weight: 500;
+    }
+    .workout-table td {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

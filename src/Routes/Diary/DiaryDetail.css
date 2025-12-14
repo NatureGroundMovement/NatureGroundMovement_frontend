@@ -1,0 +1,735 @@
+﻿.diarydetail-container {
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: calc(1.5rem + 70px) 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.diarydetail-container .diarydetail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.diarydetail-container .diarydetail-header h1 {
+    font-size: 2.5rem;
+}
+
+.diarydetail-container .diarydetail-header button {
+    font-size: 1.6rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.diarydetail-container .diarydetail-author {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 1rem 0 2rem;
+}
+
+.diarydetail-container .profile {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.diarydetail-container .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.diarydetail-container .profile .icon {
+    font-size: 1.3rem;
+}
+
+.diarydetail-container .author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.diarydetail-container .nickname {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.diarydetail-container .date {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.3;
+}
+
+.diarydetail-container .diary-info {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #aac3e8; /* 전체 테두리 한 줄 */
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* 각 행 */
+.diarydetail-container .info-row {
+  display: flex;
+  border-bottom: 1px solid #aac3e8; /* 행 사이 구분선 */
+}
+
+.diarydetail-container .info-row:last-child {
+  border-bottom: none; /* 마지막 행은 아래선 제거 */
+}
+
+/* 각 셀 */
+.diarydetail-container .info-row div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-right: 1px solid #aac3e8; /* 열 사이 구분선 */
+}
+
+.diarydetail-container .info-row div:last-child {
+  border-right: none; /* 마지막 열은 오른쪽선 제거 */
+}
+
+.diarydetail-container .info-row b {
+  background: #dce7fd;
+  color: #333;
+  font-weight: 600;
+  padding: 0.7rem 1rem;
+  min-width: 70px;
+  text-align: center;
+  font-size: 1.2rem;
+  border-right: 1px solid #aac3e8;
+}
+
+.diarydetail-container .info-row span {
+  flex: 1;
+  padding: 0.7rem 0.8rem;
+  color: #444;
+  background: #fff;
+  font-size: 1.1rem;
+}
+
+.diarydetail-container .diary-section {
+  background: #f8faff;
+  border: 1px solid #aac3e8;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(74,134,232,0.1);
+  margin-top: 3.5rem;
+}
+
+.diarydetail-container .diary-section h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.diarydetail-container .workout-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.diarydetail-container .summary-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #aac3e8;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.diarydetail-container .summary-item b {
+  background: #dce7fd;
+  padding: 0.7rem 1rem;
+  min-width: 90px;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #333;
+  border-right: 1px solid rgba(74,134,232,0.2);
+}
+
+.diarydetail-container .summary-item span {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.diarydetail-container .rating-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  grid-column: span 1;
+}
+
+.diarydetail-container .rating-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.diarydetail-container .rating-item b {
+  width: 55px;
+  text-align: right;
+  color: #3a63a8;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.diarydetail-container .workout-memo {
+    display: flex;
+    border: 1px solid #ccc;
+}
+
+.diarydetail-container .rating-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 2;
+  padding: 0.2rem 0;
+  border-right: 1px solid #ccc;
+  padding: 0.7rem 0.9rem;
+}
+
+.diarydetail-container .rating-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.3rem;
+}
+
+.diarydetail-container .gauge-bar {
+  flex: 1;
+  height: 12px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.diarydetail-container  .gauge-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6ba6ff, #4a86e8);
+  border-radius: 10px 0 0 10px;
+  transition: width 0.4s ease;
+  box-shadow: 0 0 5px rgba(74, 134, 232, 0.5);
+}
+
+.diarydetail-container  .pain-part {
+    flex: 1;
+    align-self: center;
+    line-height: 1.8rem;
+    padding: 0.7rem 0.9rem;
+}
+
+.diarydetail-container  .pain-part h4 {
+    font-size: 1.3rem;
+}
+
+.diarydetail-container  .pain-part p {
+  font-size: 1rem;
+}
+
+.diarydetail-container .note-section {
+    display: flex;
+    gap: 1rem;
+}
+
+.diarydetail-container .note-section {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+/* 기본 노트 스타일 (공통) */
+.diarydetail-container .note {
+  flex: 1;
+  aspect-ratio: 1/0.55;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  box-shadow: 3px 4px 12px rgba(74,134,232,0.08);
+  position: relative;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  overflow: visible;
+  cursor: default;
+}
+
+/* 제목 스타일 (공통) */
+.diarydetail-container .note h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.35rem;
+  color: #12407a; /* 진한 계열(테마와 조화) */
+  font-weight: 700;
+}
+
+/* 내용 텍스트 */
+.diarydetail-container .note p {
+  margin: 0;
+  line-height: 1.45;
+  font-size: 1rem;
+}
+
+.diarydetail-container .note::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 14px;
+  width: 36px;
+  height: 10px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, rgba(74,134,232,0.95), rgba(74,134,232,0.7));
+  transform: rotate(-6deg);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  z-index: 3;
+}
+
+/* 노트 1: 따뜻한 크림-옐로우 */
+.diarydetail-container .note:nth-of-type(1) {
+  background: #fffbe6;        /* 연한 크림 옐로우 */
+  border: 1px solid rgba(74,134,232,0.12); /* 연한 테마 테두리 */
+}
+.diarydetail-container .note:nth-of-type(1) h4 { color: #a37b1e; } /* 제목 톤 조정 */
+
+/* 노트 2: 상쾌한 민트 */
+.diarydetail-container .note:nth-of-type(2) {
+  background: #eafff5;        /* 연한 민트 */
+  border: 1px solid rgba(74,134,232,0.12);
+}
+.diarydetail-container .note:nth-of-type(2) h4 { color: #2a6f5b; }
+
+/* 노트 3: 부드러운 코랄-핑크 */
+.diarydetail-container .note:nth-of-type(3) {
+  background: #fff0f4;        /* 연한 핑크 */
+  border: 1px solid rgba(74,134,232,0.12);
+}
+.diarydetail-container .note:nth-of-type(3) h4 { color: #7a335f; }
+
+
+.diarydetail-container .diet-section {
+  background: #f8faff;
+  border: 1px solid #aac3e8;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(74,134,232,0.1);
+  margin-top: 3.5rem;
+}
+
+.diarydetail-container .diet-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.diarydetail-container .diet-section .meal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.diarydetail-container .diet-section .meal-card {
+  border: 1px solid #aac3e8;
+  background-color: #f8faff;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: 0.25s ease;
+}
+
+.diarydetail-container .diet-section .meal-index {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.diarydetail-container .media-container {
+  margin-top: 3rem;
+}
+
+.diarydetail-container .media-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.diarydetail-container .diary-medias {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+}
+
+.diarydetail-container .diary-media-image,
+.diarydetail-container .diary-media-video {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 정사각형 유지 */
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #f3f3f3;
+  position: relative;
+}
+.diarydetail-container .diary-media-video:fullscreen {
+  aspect-ratio: auto;
+  object-fit: contain;
+  background-color: black;
+}
+.diarydetail-container .diary-media-video:-webkit-full-screen {
+  aspect-ratio: auto;
+  object-fit: contain;
+  background-color: black;
+}
+
+.diarydetail-container .diary-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.diarydetail-container .image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.diarydetail-container .image-modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.diarydetail-container .image-modal-content img {
+  width: 100%;
+  height: auto;
+  max-width: 90w;
+  max-height: 90vh;
+  border-radius: 8px;
+}
+
+.diarydetail-container .image-modal-content video {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 8px;
+}
+
+.diarydetail-container .diary-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 3rem;
+}
+
+.diarydetail-container .tag {
+    background: #d6e4fa;
+    color: #4a86e8;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 4px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.diarydetail-container .tag:hover {
+  background-color: #c7daf6;
+}
+
+@media (max-width: 768px) {
+  .diarydetail-container {
+    height: 100vh;
+    padding: calc(56px + 1rem) 1rem calc(60px + 1rem);
+    overflow-y: auto;
+  }
+  .diarydetail-container .diarydetail-header h1 {
+    font-size: 20px;
+  }
+  .diarydetail-container .diarydetail-author {
+    gap: 4px;
+    margin: 8px 0 16px;
+  }
+  .diarydetail-container .profile {
+    width: 28px;
+    height: 28px;
+  }
+  .diarydetail-container .profile .icon {
+    font-size: 14px;
+  }
+  .diarydetail-container .nickname {
+    font-size: 14px;
+    line-height: 1.1;
+  }
+  .diarydetail-container .date {
+      font-size: 12px;
+      line-height: 1.1;
+  }
+  .diarydetail-container .diary-info {
+    border-radius: 0;
+    overflow: visible;
+  }
+  /* row를 세로 방향으로 배치 (b와 span이 위아래 구조) */
+  .diarydetail-container .info-row {
+    flex-direction: column;
+    border-bottom: 1px solid #aac3e8;
+    overflow: hidden;
+  }
+  .diarydetail-container .info-row.sec {
+    flex-direction: row;
+  }
+  /* 각 셀을 100% 너비로 */
+  .diarydetail-container .info-row div {
+    flex: none;
+    width: 100%;
+    border-right: none;           /* 세로 구조이므로 우측 선 제거 */
+    border-bottom: 1px solid #aac3e8;
+  }
+  .diarydetail-container .info-row.sec div {
+    width: calc(100% / 3);
+    text-align: center;
+    border-bottom: none;
+  }
+  /* 마지막 셀의 아래선 제거 */
+  .diarydetail-container .info-row div:last-child {
+    border-bottom: none;
+  }
+  /* 라벨 영역(b) 스타일 축소 + 좌측 정렬 */
+  .diarydetail-container .info-row b {
+    text-align: left;
+    padding: 6px 8px;
+    font-size: 12px;
+    min-width: unset;
+    display: block;
+    border-right: none;          /* 모바일에서는 테이블 형태 제거 */
+    background: #e6eeff;
+  }
+  /* 값(span) 스타일 */
+  .diarydetail-container .info-row span {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+  .diarydetail-container .diary-section {
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin-top: 32px;
+  }
+  .diarydetail-container .diary-section h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .diarydetail-container .summary-item b {
+    font-size: 12px;
+    padding: 6px 8px;
+    min-width: 70px;
+  }
+  .diarydetail-container .summary-item span {
+    font-size: 12px;
+    padding: 12px 8px;
+  }
+  .diarydetail-container .workout-summary {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .diarydetail-container .rating-item {
+    gap: 8px;
+  }
+  .diarydetail-container .rating-item b {
+    width: 35px;
+    font-size: 12px;
+  }
+  .diarydetail-container  .gauge-bar {
+    height: 6px;
+  }
+  .diarydetail-container .note-section {
+    gap: 6px;
+    margin-top: 16px;
+  }
+  .diarydetail-container .note {
+    padding: 6px;
+    border-radius: 4px;
+    aspect-ratio: 1/1;
+  }
+  .diarydetail-container .note h4 {
+    font-size: 14px;
+  }
+  .diarydetail-container .note p {
+    font-size: 12px;
+  }
+  .diarydetail-container .note::before {
+    width: 24px;
+    height: 6px;
+    top: -4px;
+    left: 10px;
+  }
+  .diarydetail-container .media-container {
+    margin-top: 24px;
+  }
+  .diarydetail-container .media-container h3 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .diarydetail-container .diary-medias {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+  }
+  .diarydetail-container .diary-media-image,
+  .diarydetail-container .diary-media-video {
+    border-radius: 4px;
+  }
+
+  .diarydetail-container .image-modal-content img {
+    border-radius: 4px;
+  }
+  .diarydetail-container .diary-tags {
+    gap: 4px;
+    margin-top: 24px;
+  }
+  .diarydetail-container .tag {
+    font-size: 10px;
+    padding: 2px 3px;
+    border-radius: 2px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .diarydetail-container {
+    padding: calc(56px + 1rem) 1rem calc(60px + 1rem);
+    overflow-y: auto;
+  }
+  .diarydetail-container .diarydetail-header h1 {
+    font-size: 28px;
+  }
+  .diarydetail-container .diarydetail-author {
+    gap: 6px;
+    margin: 12px 0 20px;
+  }
+  .diarydetail-container .profile {
+    width: 40px;
+    height: 40px;
+  }
+  .diarydetail-container .profile .icon {
+    font-size: 20px;
+  }
+  .diarydetail-container .nickname {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .diarydetail-container .date {
+      font-size: 14px;
+      line-height: 1.1;
+  }
+  .diarydetail-container .info-row b {
+    font-size: 16px;
+    padding: 10px 12px;
+  }
+  .diarydetail-container .info-row span {
+    padding: 10px 12px;
+    font-size: 16px;
+  }
+  .diarydetail-container .diary-section {
+    padding: 12px 16px;
+    margin-top: 42px;
+  }
+  .diarydetail-container .diary-section h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .diarydetail-container .summary-item {
+    border-radius: 4px;
+  }
+  .diarydetail-container .summary-item b {
+    font-size: 16px;
+    padding: 12px;
+  }
+  .diarydetail-container .summary-item span {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+  .diarydetail-container .rating-item {
+    gap: 12px;
+  }
+  .diarydetail-container .rating-item b {
+    width: 46px;
+    font-size: 16px;
+  }
+  .diarydetail-container .workout-summary {
+    margin-bottom: 28px;
+    gap: calc(8px);
+  }
+  .diarydetail-container  .gauge-bar {
+    height: 8px;
+  }
+  .diarydetail-container .note-section {
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .diarydetail-container .note {
+    padding: 10px;
+    border-radius: 4px;
+    aspect-ratio: 4/3;
+  }
+  .diarydetail-container .note h4 {
+    font-size: 16px;
+  }
+  .diarydetail-container .note p {
+    font-size: 14px;
+  }
+  .diarydetail-container .note::before {
+    width: 36px;
+    height: 8px;
+    top: -4px;
+    left: 14px;
+  }
+  .diarydetail-container .media-container {
+    margin-top: 32px;
+  }
+  .diarydetail-container .media-container h3 {
+    margin-bottom: 6px;
+    font-size: 21px;
+  }
+  .diarydetail-container .diary-medias {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+  }
+  .diarydetail-container .diary-media-image,
+  .diarydetail-container .diary-media-video {
+    border-radius: 4px;
+  }
+
+  .diarydetail-container .image-modal-content img {
+    border-radius: 4px;
+  }
+  .diarydetail-container .diary-tags {
+    gap: 8px;
+    margin-top: 32px;
+  }
+  .diarydetail-container .tag {
+    font-size: 16px;
+    padding: 3px 6px;
+    border-radius: 2px;
+  }
+}

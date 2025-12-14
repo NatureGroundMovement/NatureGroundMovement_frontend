@@ -1,0 +1,194 @@
+﻿.saveroutine-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.saveroutine-container .saveroutine-header {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 0.7rem 1rem;
+}
+
+.saveroutine-container h3 {
+    font-size: 1.6rem;
+}
+
+.saveroutine-container .close-icon {
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.saveroutine-container .saveroutine-body {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 18px;
+  gap: 20px;
+  flex: 1;
+}
+
+/* Step 1️⃣: 옵션 선택 */
+.saveroutine-container .save-option-step {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.saveroutine-container .save-option-step p {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.saveroutine-container .save-option-step span {
+  color: #777;
+  font-size: 1rem;
+  margin-left: 4px;
+}
+
+.saveroutine-container .option-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.saveroutine-container .option-buttons .all-btn {
+  background: #4a86e8;
+  color: #fff;
+  border: none;
+  height: 38px;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.saveroutine-container .option-buttons .all-btn:hover {
+  background: #3b6dc3;
+}
+
+.saveroutine-container .day-buttons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.saveroutine-container .day-buttons button {
+  background: #E8F0FE;
+  border: 1px solid #aac3e8;
+  color: #4a86e8;
+  border-radius: 5px;
+  height: 38px;
+  padding: 0 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.saveroutine-container .day-buttons button:hover {
+  background: #D0E0FD;
+}
+
+/* Step 2️⃣: 제목 및 선택 UI */
+.saveroutine-container .save-input-step {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.saveroutine-container .routine-slot-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.saveroutine-container .routine-slot-selector p {
+  font-weight: 500;
+  margin-bottom: 4px;
+  font-size: 1.3rem;
+}
+
+.saveroutine-container .routine-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.saveroutine-container .routine-slots button {
+  background: #E8F0FE;
+  border: 1px solid #aac3e8;
+  color: #4a86e8;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.saveroutine-container .routine-slots button:hover {
+  background: #D0E0FD;
+}
+
+.saveroutine-container .routine-slots .selected {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+/* 제목 입력창 */
+.saveroutine-container .title-input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.saveroutine-container .title-input label {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.saveroutine-container .title-input input {
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 12px 10px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.saveroutine-container .title-input input:focus {
+  outline: none;
+  border-color: #4a86e8;
+}
+/* footer */
+.saveroutine-container  .saveroutine-footer {
+    flex-shrink: 0;
+    padding: 0.6rem 1rem;
+    border-top: 1px solid #ddd;
+    display: flex;
+    gap: 0.7rem;
+    justify-content: flex-end;
+}
+
+.saveroutine-container  .saveroutine-footer button {
+    font-size: 1.1rem;
+    padding: 0.45rem 1.1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.saveroutine-container  .saveroutine-footer button:hover {
+    background-color: #d0d0d0;
+}

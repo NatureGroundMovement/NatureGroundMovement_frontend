@@ -1,0 +1,142 @@
+﻿.mobile-highlight-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 999;
+}
+
+.mobile-highlight-container .mobile-swipe-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-highlight-container .mobile-video-page {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-highlight-container .mobile-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.mobile-highlight-container .comment-overlay,
+.mobile-highlight-container .info-overlay {
+    position: absolute;
+    width: 100%;
+    padding: 12px;
+    background-color: #fff;
+    left: 0px;
+    bottom: 0;
+    z-index: 100;
+    border-radius: 14px 14px 0 0;
+    touch-action: pan-y;
+    transform-origin: top; /* 추가 */
+    will-change: transform;
+}
+
+.mobile-highlight-container .comment-drag-handle,
+.mobile-highlight-container .info-drag-handle {
+  width: 40px;
+  height: 5px;
+  background: #666;
+  border-radius: 999px;
+  margin: 10px auto;
+}
+
+/* 오른쪽 Reaction 패널 */
+.mobile-highlight-container .mobile-reaction-panel {
+  position: absolute;
+  right: 0px;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 10;
+}
+
+/* 영상 위 정보 (좌하단) */
+.mobile-highlight-container .mobile-info-overlay {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 10;
+  color: #fff;
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobile-highlight-container .mobile-info-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.mobile-highlight-container .highlight-author {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.mobile-highlight-container .profile {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.mobile-highlight-container .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-highlight-container .profile .icon {
+    font-size: 18px;
+}
+
+.mobile-highlight-container .author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-highlight-container .nickname {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .mobile-highlight-container .mobile-info-title {
+    font-size: 24px;
+  }
+  .mobile-highlight-container .highlight-author {
+    gap: 0.5rem;
+  }
+  .mobile-highlight-container .profile {
+    width: 40px;
+    height: 40px;
+  }
+  .mobile-highlight-container .profile .icon {
+    font-size: 20px;
+  }
+  .mobile-highlight-container .nickname {
+    font-size: 18px;
+  }
+}

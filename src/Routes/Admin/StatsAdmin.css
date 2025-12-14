@@ -1,0 +1,183 @@
+﻿.stats-admin .range-filter {
+    display: flex;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.stats-admin .range-btn {
+    padding: 6px 12px;
+    background-color: #E8F0FE;
+    color: #4a86e8;
+    border: 1px solid #4a86e8;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.stats-admin .range-btn:hover {
+    background-color: #D0E0FD;
+}
+
+.stats-admin .range-btn.active {
+    background-color: #4a86e8;
+    color: white;
+    font-weight: 700;
+}
+
+.stats-admin .chart-wrapper,
+.stats-admin .table-wrapper {
+    border: 2px solid #aac3e8;
+    background-color: #E8F0FE;
+    padding: 1rem 1.5rem 1.5rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.stats-admin .chart-wrapper {
+    height: 500px;
+}
+
+.stats-admin h3 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.stats-admin .chart-wrapper .recharts-responsive-container {
+    padding: 2.5rem 2rem 1rem 0;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+.stats-admin .total-posts {
+    border: 2px solid #aac3e8;
+    background-color: #E8F0FE;
+    padding: 1rem 1.5rem 1.5rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.stats-admin .total-posts .values {
+    display: flex;
+    gap: 0.7rem;
+}
+
+.stats-admin .total-posts .values p {
+    flex: 1;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.stats-admin .table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+.stats-admin .table-wrapper th {
+    background-color: #d9d9d9;
+    color: #333;
+    font-weight: 600;
+    padding: 10px 14px;
+    font-size: 1rem;
+    border-right: 1px solid #fff;
+    width: 15%;
+}
+
+.stats-admin .table-wrapper th:last-child {
+    border-right: none;
+}
+
+.stats-admin .table-wrapper td {
+    background-color: #fff;
+    padding: 10px;
+    color: #333;
+    text-align: center;
+    font-size: 0.95rem;
+    border: 1px solid #ccc;
+}
+
+.stats-admin .table-wrapper td:first-child {
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .stats-admin {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .stats-admin .range-filter {
+        gap: 6px;
+        margin: 0;
+    }
+    .stats-admin .range-btn {
+        font-size: 14px;
+        padding: 4px 8px;
+        border-radius: 3px;
+    }
+    .stats-admin h3 {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+    .stats-admin .total-posts {
+        border: none;
+        padding: 0;
+        background: none;
+    }
+    .stats-admin .total-posts .values {
+        gap: 6px;
+    }
+    .stats-admin .total-posts .values p {
+        font-size: 14px;
+        padding: 6px;
+        flex-direction: column;
+        gap: 2px;
+    }
+    .stats-admin .chart-wrapper,
+    .stats-admin .table-wrapper {
+        border: 1px solid #ccc;
+        padding: 8px 12px;
+        background: none;
+        border-radius: 3px;
+    }
+    .stats-admin .chart-wrapper .recharts-responsive-container {
+        padding: 0;
+    }
+    .stats-admin .table-wrapper th {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    .stats-admin .table-wrapper td {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .stats-admin .range-filter {
+        gap: 8px;
+        margin: 12px 0;
+    }
+    .stats-admin .range-btn {
+        font-size: 16px;
+        padding: 6px 10px;
+        border-radius: 4px;
+    }
+    .stats-admin .chart-wrapper,
+    .stats-admin .table-wrapper {
+        padding: 16px 24px;
+        border-radius: 4px;
+    }
+}

@@ -1,0 +1,81 @@
+﻿.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+.menu-container .menu-block {
+    font-size: 1.1rem;
+    padding: 0.3rem;
+    text-align: center;
+    aspect-ratio: 1/1;
+    width: 8rem;
+    border-radius: 12px;
+    background-color: #E8F0FE;
+    color: #333;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+
+    /* 기본 테두리 */
+    border: 3px solid #aac3e8;
+    transition: all 0.25s ease;
+}
+
+/* hover 효과 */
+.menu-container .menu-block:hover {
+    box-shadow: 0 4px 12px rgba(74, 134, 232, 0.2); /* 부드러운 파란빛 그림자 */
+    cursor: pointer;
+    transform: translateY(-2px); /* 살짝 떠오르게 */
+}
+
+.menu-container .menu-block .icon {
+    font-size: 2.8rem;
+    color: #2d4f8a;
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        gap: 6px;
+        padding: 0;
+        margin-bottom: 16px;
+    } 
+
+    .menu-container .menu-block {
+        font-size: 11px;
+        border-width: 1px;
+        border-radius: 4px;
+        width: 4rem;
+        padding: 4px;
+        gap: 6px;
+    }
+
+    .menu-container .menu-block .icon {
+        font-size: 21px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu-container {
+        gap: 12px;
+        padding: 0;
+        margin-bottom: 16px;
+    } 
+
+    .menu-container .menu-block {
+        font-size: 16px;
+        border-width: 1px;
+        border-radius: 4px;
+        width: 6rem;
+        padding: 4px;
+        gap: 6px;
+    }
+
+    .menu-container .menu-block .icon {
+        font-size: 32px;
+    }
+}

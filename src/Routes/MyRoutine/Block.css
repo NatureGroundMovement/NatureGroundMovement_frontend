@@ -1,0 +1,180 @@
+﻿.block-container {
+    padding: calc(70px + 1rem) 3rem 2rem;
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.block-container h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.block-container .block-list {
+    border: 1px solid black;
+    padding: 1.5rem;
+    border-radius: 8px;
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.block-container .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.block-container .filter {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.block-container .filter > h3 {
+    font-size: 2rem;
+}
+
+.block-container .filter .dropdown-header  {
+    width: 140px;
+    font-size: 1.1rem;
+    padding: 0 0.8rem;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.block-container .filter .dropdown-header .arrow {
+    font-size: 0.8rem;
+}
+
+.block-container .header .buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.block-container .header .buttons button {
+    font-size: 1.1rem;
+    padding: 0 0.7rem;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.block-container .header .buttons .delete {
+    background-color: #D32F2F;
+    color: white;
+}
+
+.block-container .header .buttons .delete:hover {
+    background-color: #B71C1C;
+}
+
+.block-container .header .buttons button:last-child {
+    background-color: #4a86e8;
+    color: white;
+}
+
+.block-container .header .buttons button:hover:last-child {
+    background-color: #3b6dc3;
+}
+
+.block-container .header .buttons button:hover {
+    background-color: #d0d0d0;
+}
+
+.block-container .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .block-container {
+        height: 100vh;
+        padding: calc(1rem + 56px) 1rem calc(1rem + 60px);
+    }
+    .block-container h2 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+    .block-container .block-list {
+        border: none;
+        padding: 0;
+    }
+    .block-container .header {
+        height: 40px;
+        margin-bottom: 4px;
+    }
+    .block-container .filter > h3 {
+        font-size: 20px;
+    }
+    .block-container .filter .dropdown-header {
+        padding: 4px 6px;
+        font-size: 12px;
+        width: 100px;
+        border-radius: 3px;
+        height: 32px;
+    }
+    .block-container .filter .dropdown-header .arrow {
+        font-size: 12px;
+    }
+    .block-container .header .buttons {
+        gap: 4px;
+    }
+    .block-container .header .buttons button {
+        font-size: 13px;
+        padding: 0 8px;
+        height: 32px;
+        border-radius: 3px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .block-container {
+        height: 100vh;
+        padding: calc(1rem + 56px) 1rem calc(1rem + 60px);
+    }
+    .block-container h2 {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+    .block-container .block-list {
+        padding: 16px;
+    }
+    .block-container .header {
+        height: 36px;
+        margin-bottom: 8px;
+    }
+    .block-container .filter > h3 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .block-container .filter .dropdown-header {
+        padding: 8px 12px;
+        font-size: 16px;
+        width: 100px;
+        border-radius: 3px;
+        height: 36px;
+    }
+    .block-container .filter .dropdown-header .arrow {
+        font-size: 14px;
+    }
+    .block-container .header .buttons button {
+        font-size: 16px;
+        padding: 0 10px;
+        height: 36px;
+        border-radius: 4px;
+    }
+}

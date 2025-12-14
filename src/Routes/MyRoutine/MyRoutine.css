@@ -1,0 +1,186 @@
+﻿.myroutine-container {
+    max-width: 75rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: calc(1rem + 70px) 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.myroutine-container .title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.myroutine-container .routine-btn {
+    display: flex;
+    gap: 0.7rem;
+    width: 100%;
+    margin: 0.7rem 0;
+}
+
+.myroutine-container .routine-btn button {
+    background-color: #E8F0FE;
+    color: #4a86e8;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.myroutine-container .routine-btn button:hover {
+    background-color: #D0E0FD;
+}
+
+.myroutine-container .routine-btn button.active {
+    background-color: #4a86e8;
+    color: white;
+}
+
+.myroutine-container .routine-box {
+    border: 1px solid #aac3e8;
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: #f8faff;
+}
+
+.myroutine-container .routine-box .header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.myroutine-container .header > h3 {
+    font-size: 2rem;
+}
+
+.myroutine-container .buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.myroutine-container .buttons button:first-child {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 0.7rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #4a86e8;
+    color: white;
+    cursor: pointer;
+}
+
+.myroutine-container .buttons button:first-child.disabled {
+    background-color: #e0e0e0;
+    color: #999;
+}
+
+.myroutine-container .buttons button:last-child {
+    border: none;
+    background: none;
+    font-size: 2rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.myroutine-container .buttons button:last-child:hover {
+    color: #444;
+}
+
+.myroutine-container .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .myroutine-container {
+        height: 100vh;
+        padding: calc(56px + 1rem) 1rem calc(60px + 1rem);
+        overflow-y: auto;
+    }
+    .myroutine-container .title {
+        font-size: 24px;
+    }
+    .myroutine-container .routine-btn {
+        gap: 6px;
+        margin: 8px 0;
+    }
+    .myroutine-container .routine-btn button {
+        font-size: 14px;
+        padding: 6px 8px;
+        border-radius: 3px;
+    }
+    .myroutine-container .routine-box {
+        padding: 0;
+        border: none;
+        background: none;
+    }
+    .myroutine-container .header > h3 {
+        font-size: 20px;
+    }
+    .myroutine-container .buttons {
+        gap: 6px;
+    }
+    .myroutine-container .buttons button:first-child {
+        font-size: 12px;
+        padding: 4px 6px;
+        border-radius: 3px;
+    }
+    .myroutine-container .buttons button:last-child {
+        font-size: 20px;
+    }
+    .myroutine-container .show-routine .routine-note p {
+        border: 1px solid #aac3e8;
+        border-radius: 4px;
+        padding: 8px 12px;  
+        background-color: #f8faff;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .myroutine-container {
+        height: 100vh;
+        padding: calc(56px + 1rem) 1rem calc(60px + 1rem);
+        overflow-y: auto;
+    }
+    .myroutine-container .title {
+        font-size: 32px;
+    }
+    .myroutine-container .routine-btn {
+        gap: 8px;
+        margin: 12px 0;
+    }
+    .myroutine-container .routine-btn button {
+        font-size: 16px;
+        padding: 8px 12px;
+        border-radius: 4px;
+    }
+    .myroutine-container .routine-box {
+        padding: 16px;
+    }
+    .myroutine-container .header > h3 {
+        font-size: 24px;
+    }
+    .myroutine-container .buttons {
+        gap: 8px;
+    }
+    .myroutine-container .buttons button:first-child {
+        font-size: 14px;
+        padding: 6px 8px;
+        border-radius: 3px;
+    }
+    .myroutine-container .buttons button:last-child {
+        font-size: 24px;
+    }
+    .myroutine-container .show-routine .routine-note p {
+        font-size: 16px;
+    }
+}

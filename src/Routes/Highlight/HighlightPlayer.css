@@ -1,0 +1,359 @@
+﻿.highlight-player {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex; /* 👉 좌우 나눔 */
+  background: #f1f1f1;
+  overflow: hidden; /* 좌우 각각 스크롤 */
+}
+
+/* 왼쪽: 정보 영역 */
+.highlight-player .highlight-info {
+  flex: 1;
+  font-size: 1.1rem;
+  max-width: 350px;
+  min-width: 320px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* ✅ 바닥에서부터 시작 */
+  height: calc(100vh - 70px); /* ✅ 전체 높이 확보 (고정 위치 유지용) */
+  box-sizing: border-box;
+  position: sticky;
+  bottom: 5vh; /* ✅ 스크롤 시에도 바닥 고정 */
+}
+
+.highlight-player .highlight-author {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.highlight-player .profile {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.highlight-player .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.highlight-player .profile .icon {
+    font-size: 1.2rem;
+}
+
+.highlight-player .author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.highlight-player .nickname {
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.highlight-player .date {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.3;
+}
+
+.highlight-player .diary-info {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #aac3e8; /* 전체 테두리 한 줄 */
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.highlight-player .highlight-overlay {
+  width: 300px;
+}
+
+.highlight-player .highlight-overlay h3 {
+  font-size: 1.5rem;
+}
+
+.highlight-player .highlight-content {
+  padding: 0.3rem 0;
+  white-space: pre-line;
+  line-height: 1.4;
+  max-height: 400px;
+  height: fit-content;
+  overflow-y: auto;
+
+  /* ✅ 스크롤바 복원 */
+  scrollbar-color: #bdbdbd #f1f1f1; /* thumb, track */
+  scrollbar-width: thin;
+}
+
+.highlight-player .highlight-content::-webkit-scrollbar {
+  width: 6px;
+}
+.highlight-player .highlight-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.highlight-player .highlight-content::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 3px;
+}
+
+.highlight-player .highlight-tags {
+    list-style: none;
+    margin: 0.4rem 0 0;
+}
+
+.highlight-player .tag {
+    background: #d6e4fa;
+    color: #4a86e8;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 3px 7px;
+    white-space: nowrap;
+    margin: 0 0.3rem 0 0;
+    cursor: pointer;
+}
+
+.highlight-player .tag:hover {
+  background-color: #c7daf6;
+}
+
+.highlight-player .see-more-btn,
+.highlight-player .see-no-more-btn
+ {
+  background: none;
+  border: none;
+  color: #4a86e8;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  transition: color 0.2s;
+}
+
+.highlight-player .see-no-more-btn {
+  margin-left: 0;
+}
+
+
+.highlight-player .see-more-btn:hover,
+.highlight-player .see-no-more-btn:hover {
+  color: #3b6dc3;
+}
+
+.highlight-player .reactionbtn-container {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+  justify-content: flex-start;
+}
+
+.highlight-player .reactionbtn-container button {
+  font-size: 1rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 4px;
+}
+
+.highlight-player .reactionbtn-container.author {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* 가운데: 영상 영역 */
+.highlight-player .video-section {
+  flex: 1;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: thin;
+  padding-left: 12px;
+}
+
+.highlight-player .video-section::-webkit-scrollbar {
+  width: 8px;
+}
+.highlight-player .video-section::-webkit-scrollbar-track {
+  background: transparent;
+}
+.highlight-player .video-section::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.highlight-player .video-wrapper {
+  scroll-snap-align: start;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.highlight-player .react-player {
+  display: block;
+  height: 90%;
+  object-fit: contain;
+  width: auto !important;
+  aspect-ratio: 9 / 16;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+/* 오른쪽: 댓글 영역 */
+.highlight-player .comment-container {
+  flex: 1;
+  max-width: 350px;
+  min-width: 320px;
+  background: #ffffff;
+  border-left: 1px solid #ddd;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+/* ====== 댓글 추가 css ====== */
+/* 헤더 */
+.highlight-player .comment-section .header h3 {
+  font-size: 1.4rem;
+}
+
+.highlight-player .comment-section .header div .dropdown-header { 
+    padding: 0.35rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    width: 80px;
+}
+
+.highlight-player .comment-section .header div .dropdown-header .arrow {
+    font-size: 0.7rem;
+}
+
+.highlight-player .comment-section .header div .dropdown-item {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.5rem;
+}
+
+.highlight-player .comment-section .profile {
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    position: relative;
+}
+
+.highlight-player .comment-section .profile .icon {
+    font-size: 1.15rem;
+}
+
+.highlight-player .comment-section .comment-nickname,
+.highlight-player .comment-section .reply-nickname {
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.highlight-player .comment-section .comment-date,
+.highlight-player .comment-section .reply-date  {
+  font-size: 0.8rem;
+  color: #777;
+  line-height: 1;
+}
+
+/* 입력란 */
+.highlight-player .comment-section .comment-input textarea,
+.highlight-player .comment-section .reply-input textarea,
+.highlight-player .comment-section .comment-edit textarea,
+.highlight-player .comment-section .reply-edit textarea {
+  font-size: 0.9rem ;
+  min-height: 1.4rem;
+  line-height: 1.4rem;
+  padding: 8px 10px;
+}
+.highlight-player .comment-section .comment-edit textarea,
+.highlight-player .comment-section .reply-edit textarea {
+  font-size: 0.85rem;
+  min-height: 1.2rem;
+  line-height: 1.2rem;
+}
+
+.highlight-player .comment-section .comment-input button,
+.highlight-player .comment-section .reply-input button,
+.highlight-player .comment-section .comment-edit button,
+.highlight-player .comment-section .reply-edit button  {
+  padding: 0 11px;
+  height: 40px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+.highlight-player .comment-section .comment-edit button,
+.highlight-player .comment-section .reply-edit button {
+  font-size: 0.85rem;
+  height: 36.8px;
+}
+
+/* 댓글 */
+.highlight-player .comment-section .comment,
+.highlight-player .comment-section .reply {
+  gap: 6px;
+  padding: 10px 0;
+}
+.highlight-player .comment-section .comment:first-child {
+  padding-top: 16px;
+}
+
+.highlight-player .comment-section .comment-content,
+.highlight-player .comment-section .reply-content {
+  font-size: 1rem;
+}
+
+.highlight-player .comment-section .comment-meta button,
+.highlight-player .comment-section .reply-meta button {
+  font-size: 0.9rem;
+}
+
+.highlight-player .comment-section .comment-options button,
+.highlight-player .comment-section .reply-options button {
+  font-size: 1.2rem;
+}
+
+.highlight-player .comment-section .options-menu button {
+  font-size: 0.9rem;
+  padding: 8px 10px;
+}
+
+@media (max-width: 1024px) {
+  .highlight-player .video-section {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    padding-left: 0;
+  }
+
+  .highlight-player .react-player {
+    height: 100%;
+  }
+}

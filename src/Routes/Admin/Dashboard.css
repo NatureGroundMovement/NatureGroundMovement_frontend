@@ -1,0 +1,112 @@
+﻿.dashboard-container {
+    padding-top: 70px;
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    /* 전체 스크롤은 body/페이지 스크롤이 담당 */
+}
+
+.dashboard-container .dashboard-admin-menu {
+    width: 16%;
+    padding: 1rem 0.8rem;
+    position: sticky;
+    top: 70px; /* 상단 고정 */
+    align-self: flex-start; /* sticky가 동작하도록 */
+}
+
+.dashboard-container > div:last-child {
+    flex: 1;
+    padding: 1rem 0.8rem 1.5rem;
+    /* 별도 스크롤 지정 없음 -> 전체 컨테이너 스크롤 따라감 */
+}
+
+.dashboard-container .dashboard-renderPage h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* ---------- 모바일 오버레이 ---------- */
+.dashboard-container .mobile-overlay {
+    visibility: hidden;
+}
+
+.dashboard-container .mobile-overlay.show {
+    visibility: visible;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* ---------- 모바일 사이드바 슬라이드 ---------- */
+.dashboard-container .mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -210px; /* 초기 위치 (왼쪽 밖) */
+  width: 210px;
+  height: 100vh;
+  padding: 12px;
+  background: #fff;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  transition: 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+.dashboard-container .mobile-sidebar h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.dashboard-container .mobile-sidebar.open {
+  left: 0;
+}
+
+@media (max-width: 1024px) {
+    .dashboard-container {
+        padding: 56px 0 60px;
+        overflow-y: auto;
+        height: 100vh;
+    }
+    .dashboard-container .admin-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+    .dashboard-container .admin-header h2 {
+        font-size: 20px;
+        line-height: 1;
+        margin-bottom: 0;
+    }
+    .dashboard-container .admin-header .bars {
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .dashboard-container > div:last-child {
+        width: 100%;
+        overflow-y: auto;
+        padding: 16px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .dashboard-container .mobile-sidebar h3 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    .dashboard-container .admin-header {
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+    .dashboard-container .admin-header h2 {
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+    .dashboard-container .admin-header .bars {
+        font-size: 28px;
+    }
+}

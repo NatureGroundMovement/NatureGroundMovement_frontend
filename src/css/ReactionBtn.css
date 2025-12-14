@@ -1,0 +1,73 @@
+﻿.reactionbtn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 0 1rem;
+  padding: 0.8rem 1.2rem;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.reactionbtn-container button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  border: 1px solid #aac3e8;
+  border-radius: 6px;
+  padding: 0.5rem 0.9rem;
+  font-size: 1.1rem;
+  color: #3a63a8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reactionbtn-container button:hover {
+  background: #e9f0ff;
+  border-color: #4a86e8;
+}
+
+.reactionbtn-container .report-btn,
+.reactionbtn-container .delete-btn {
+  background: #4a86e8;
+  color: white;
+}
+
+.reactionbtn-container .report-btn:hover,
+.reactionbtn-container .delete-btn:hover {
+  background: #3a6dd8;
+}
+
+.reactionbtn-container button.liked {
+  background: #e9f0ff;
+  border-color: #4a86e8;
+}
+
+@media (max-width: 768px) {
+  .reactionbtn-container {
+    padding: 6px 0;
+    margin: 24px 0;
+    gap: 8px;
+  }
+  .reactionbtn-container button {
+    font-size: 12px;
+    padding: 4px 5px;
+    border-radius: 4px;
+    gap: 4px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .reactionbtn-container {
+    padding: 6px 0;
+    margin: 36px 0;
+    gap: 12px;
+  }
+  .reactionbtn-container button {
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    gap: 4px;
+  }
+}

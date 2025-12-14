@@ -1,0 +1,204 @@
+﻿.show-routine .part-table label,
+.show-routine .exercise-list label {
+    font-size: 1.4em;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.show-routine .part-table {
+    margin: 1rem 0 2rem;
+}
+
+.show-routine .part-table table,
+.show-routine .exercise-list table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+.show-routine .part-table table {
+    margin-top: 0.5rem;
+}
+
+.show-routine .part-table th,
+.show-routine .part-table td,
+.show-routine .exercise-list th,
+.show-routine .exercise-list td {
+    width: calc(100% / 7);
+}
+
+.show-routine .part-table th,
+.show-routine .exercise-list th {
+    background-color: #d9d9d9;
+    color: #333;
+    font-weight: 600;
+    padding: 12px 14px;
+    font-size: 1.1rem;
+    border-right: #fff 1px solid;
+    white-space: nowrap;
+}
+
+.show-routine .part-table th:last-child,
+.show-routine .exercise-list th:last-child {
+    border-right: none;
+}
+
+.show-routine .part-table td,
+.show-routine .exercise-list td {
+    background-color: #fff;
+    padding: 12px;
+    color: #333;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 1.05rem;
+}
+
+.show-routine .exercise-list th:first-child {
+    width: 25%;
+    white-space: wrap;
+}
+
+.show-routine .exercise-list .no-data {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.show-routine .exercise-list .block-title-cell {
+    background-color: #e5e5e5;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #222;
+    padding: 11px 18px;
+    border-top: 2px solid #ccc;
+}
+
+.show-routine .day-selector {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.4rem 0 0.5rem;
+}
+
+.show-routine .day-selector button {
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 9px;
+    border: none;
+    background-color: #f3f4f6;
+    border: 1px solid #ccc;
+    color: #444;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.show-routine .day-selector button:hover {
+    background-color: #e8eaf1;
+}
+
+.show-routine .day-selector button.active {
+    background: #dce7fd;
+    border-color: #4a86e8;
+    color: #1f4eb4;
+}
+
+.show-routine .routine-note {
+    margin-top: 3rem;
+}
+
+.show-routine .routine-note p {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 768px) {
+    .show-routine .part-table label,
+    .show-routine .exercise-list label {
+        font-size: 16px;
+        margin-bottom: 6px !important;
+    }
+    .show-routine .part-table {
+        margin: 8px 0 16px;
+    }
+    .show-routine .part-table table {
+        margin-top: 4px;
+    }
+    .show-routine .part-table th,
+    .show-routine .exercise-list th {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+    .show-routine .part-table td,
+    .show-routine .exercise-list td {
+        font-size: 12px;
+        padding: 6px;
+    }
+    .show-routine .exercise-list .no-data {
+        font-size: 14px;
+        margin-top: 16px;
+    }
+    .show-routine .exercise-list .block-title-cell {
+        font-size: 12px;
+        padding: 7px 10px;
+    }
+    .show-routine .day-selector {
+        gap: 4px;
+        margin: 4px 0 6px;
+    }
+    .show-routine .day-selector button {
+        font-size: 12px;
+        padding: 4px;
+        border-radius: 3px;
+    }
+    .show-routine .routine-note {
+        margin-top: 16px;
+    }
+    .show-routine .routine-note p {
+        font-size: 14px;
+        margin-top: 4px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .show-routine .part-table label,
+    .show-routine .exercise-list label {
+        font-size: 20px;
+        margin-bottom: 8px !important;
+    }
+    .show-routine .part-table {
+        margin: 16px 0 24px;
+    }
+    .show-routine .part-table table {
+        margin-top: 6px;
+    }
+    .show-routine .exercise-list .block-title-cell {
+        font-size: 16px;
+        padding: 10px 12px;
+    }
+    .show-routine .part-table th,
+    .show-routine .exercise-list th {
+        font-size: 16px;
+        padding: 10px 12px;
+    }
+    .show-routine .part-table td,
+    .show-routine .exercise-list td {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .show-routine .day-selector {
+        gap: 6px;
+        margin: 6px 0 8px;
+    }
+    .show-routine .day-selector button {
+        font-size: 16px;
+        padding: 8px;
+        border-radius: 4px;
+    }
+    .show-routine .routine-note p {
+        font-size: 16px;
+        margin-top: 6px;
+    }
+}

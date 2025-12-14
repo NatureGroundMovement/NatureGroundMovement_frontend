@@ -1,0 +1,149 @@
+﻿.account-admin .no-user {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 100px;
+}
+
+.account-admin .search-input {
+    width: 100%;
+    font-size: 1.05rem;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 0.5rem;
+}
+.account-admin .search-input:focus {
+    border-color: #4a86e8;
+}
+
+.account-admin .account-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.account-admin .account-table th {
+    background-color: #d9d9d9;
+    color: #333;
+    font-weight: 600;
+    padding: 12px 14px;
+    font-size: 1rem;
+    border-right: 1px solid #fff;
+    width: 15%;
+}
+
+.account-admin .account-table th:nth-child(2) {
+    width: 30%;
+    white-space: wrap;
+}
+
+.account-admin .account-table th:nth-child(1),
+.account-admin .account-table th:nth-child(3),
+.account-admin .account-table th:nth-child(4) {
+    width: calc(70% / 3);
+}
+
+.account-admin .account-table th:last-child,
+.account-admin .account-table td:last-child {
+    border-right: none;
+}
+
+.account-admin .account-table td {
+    background-color: #fff;
+    padding: 10px;
+    color: #333;
+    text-align: center;
+    font-size: 0.95rem;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.account-admin .account-table td:first-child {
+    font-weight: 500;
+}
+
+.account-admin .account-table tr:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.account-admin .account-table span {
+    color: #4a86e8;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.account-admin .account-table .status-banned {
+    color: #D32F2F;
+}
+
+.account-admin .account-table button {
+    background-color: #4a86e8;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.account-admin .account-table button:hover {
+    background-color: #3b6dc3;
+}
+
+.account-admin .account-table .btn-ban {
+    background-color: #D32F2F;
+}
+.account-admin .account-table .btn-ban:hover {
+    background-color: #B71C1C;
+}
+
+@media (max-width: 768px) {
+    .account-admin .no-user {
+        margin: 32px 0;
+        font-size: 14px;
+    }
+    .account-admin .search-input {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+    .account-admin .account-table th {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+    .account-admin .account-table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+    .account-admin .account-table span {
+        font-size: 13px;
+    }
+    .account-admin .account-table button {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .account-admin .no-user {
+        margin: 40px 0;
+        font-size: 18px;
+    }
+    .account-admin .search-input {
+        font-size: 16px;
+        padding: 12px 16px;
+        margin-bottom: 12px;
+    }
+    .account-admin .account-table th {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+    .account-admin .account-table td {
+        font-size: 16px;
+        padding: 8px;
+    }
+    .account-admin .account-table span {
+        font-size: 16px;
+    }
+    .account-admin .account-table button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}

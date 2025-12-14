@@ -1,0 +1,533 @@
+﻿.routinedetail-container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: calc(1.5rem + 70px) 2rem 3rem;
+}
+
+/* 상단 썸네일 + 정보 */
+.routinedetail-container .top-section {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.routinedetail-container .thumbnail {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.routinedetail-container .routinedetail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 0.3rem;
+}
+
+.routinedetail-container .routinedetail-header .title {
+  font-size: 2rem;
+  font-weight: 700;
+  word-break: break-word;
+  color: #222;
+}
+
+.routinedetail-container .routinedetail-header button {
+  padding: 0.6rem 0.8rem;
+  background-color: #4a86e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+}
+
+.routinedetail-container .routinedetail-header button:hover {
+  background-color: #3a6fcc;
+}
+
+/* 프로필 */
+.routinedetail-container .profile-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+.routinedetail-container .profile {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.routinedetail-container .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.routinedetail-container .profile .icon {
+    font-size: 1.2rem;
+}
+
+.routinedetail-container .author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.routinedetail-container .nickname {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.routinedetail-container .date {
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.3;
+}
+
+/* 정보 그룹 */
+.routinedetail-container .group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.routinedetail-container .group > div {
+  display: flex;
+}
+
+.routinedetail-container .group li {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  min-width: 340px;
+}
+
+.routinedetail-container .group .tags {
+  align-items: flex-start !important;
+}
+
+.routinedetail-container .group li strong {
+  width: 100px;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.routinedetail-container .rates span {
+  margin-right: 3px;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* 부위 / 목적 */
+.routinedetail-container li .part,
+.routinedetail-container li .purpose {
+  background: #f1f1f1;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  padding: 3px 6px;
+  color: #444;
+  margin-right: 0.4rem;
+}
+
+.routinedetail-container li .tag {
+  display: inline-block;
+  background: #d6e4fa;
+  color: #4a86e8;
+  border-radius: 4px;
+  font-size: 1rem;
+  padding: 4px 8px;
+  margin-right: 0.4rem;
+  margin-bottom: 0.3rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.routinedetail-container li .tag:hover {
+  background-color: #c7daf6;
+}
+
+/* 테이블 */
+.routinedetail-container .table-container {
+  margin: 3rem 4rem 0;
+}
+
+.routinedetail-container .day-selector {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.routinedetail-container .day-btn {
+  padding: 0.4rem 0.9rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  background-color: #f3f4f6;
+  border: 1px solid #ccc;
+  color: #444;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.routinedetail-container .day-btn:hover {
+  background: #e8eaf1;
+}
+
+.routinedetail-container .day-btn.active {
+  background: #dce7fd;
+  border-color: #4a86e8;
+  color: #1f4eb4;
+  transform: translateY(-1px);
+}
+
+/* 상세 설명 */
+.routinedetail-container .detail-info {
+  padding: 0 1.5rem;
+  background: #f8faff; /* 부드러운 블루톤 배경 */
+  border: 1px solid #aac3e8;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(74, 134, 232, 0.08);
+  list-style: none;
+  margin: 3rem 4rem 0;
+}
+
+.routinedetail-container .detail-info li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid rgba(74, 134, 232, 0.2);
+}
+
+.routinedetail-container .detail-info li:last-child {
+  border-bottom: none;
+}
+
+.routinedetail-container .detail-info span {
+  display: inline-block;
+  width: 140px;
+  font-weight: 600;
+  color: #3a63a8; /* 메인 테마색 */
+  font-size: 1.2rem;
+}
+
+.routinedetail-container .detail-info p {
+  flex: 1;
+  margin: 0;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.5;
+  white-space: pre-wrap; /* 줄바꿈 유지 */
+}
+
+.routinedetail-container .media-container {
+  margin-top: 3rem;
+}
+
+.routinedetail-container .media-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.routinedetail-container .routine-medias {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+}
+
+.routinedetail-container .routine-media-image,
+.routinedetail-container .routine-media-video {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 정사각형 유지 */
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #f3f3f3;
+  position: relative;
+}
+.routinedetail-container .routine-media-video:fullscreen {
+  aspect-ratio: auto;
+  object-fit: contain;
+  background-color: black;
+}
+.routinedetail-container .routine-media-video:-webkit-full-screen {
+  aspect-ratio: auto;
+  object-fit: contain;
+  background-color: black;
+}
+
+.routinedetail-container .image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.routinedetail-container .image-modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.routinedetail-container .image-modal-content img,
+.routinedetail-container .image-modal-content video {
+  width: 100%;
+  height: auto;
+  max-width: 100vw;
+  max-height: 90vh;
+  border-radius: 8px;
+}
+
+/* 오버레이 / 저장 모달 */
+.routinedetail-container .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.routinedetail-container .image-modal-content video {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  .routinedetail-container {
+    height: 100vh;
+    padding: calc(56px + 1rem) 1rem 60px;
+    overflow-y: auto;
+  }
+  .routinedetail-container .top-section {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .routinedetail-container .thumbnail {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/1;
+    border-radius: 6px;
+  }
+  .routinedetail-container .routinedetail-header {
+    margin-bottom: 8px;
+  }
+  .routinedetail-container .routinedetail-header .title {
+    font-size: 20px;
+  }
+  .routinedetail-container .profile-section {
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+  .routinedetail-container .profile {
+    width: 32px;
+    height: 32px;
+  }
+  .routinedetail-container .profile .icon {
+    font-size: 16px;
+  }
+  .routinedetail-container .nickname  {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .routinedetail-container .date {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  .routinedetail-container .routinedetail-header button {
+    font-size: 12px;
+    padding: 6px 8px;
+    border-radius: 4px;
+  }
+  .routinedetail-container .group {
+    gap: 0;
+  }
+  .routinedetail-container .group li {
+    min-width: 0;
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+  .routinedetail-container .group li strong {
+    font-size: 14px;
+    width: 80px;
+  }
+  .routinedetail-container .rates span {
+    font-size: 14px;
+    margin-right: 2px;
+  }
+  .routinedetail-container li .part,
+  .routinedetail-container li .purpose {
+    font-size: 10px;
+    padding: 2px 3px;
+    border-radius: 2px;
+    margin-right: 3px;
+  }
+  .routinedetail-container li .tag {
+    font-size: 10px;
+    padding: 2px 3px;
+    border-radius: 2px;
+    margin-bottom: 0;
+    margin-right: 4px;
+  }
+  .routinedetail-container .group > div {
+    flex-direction: column;
+  }
+  .routinedetail-container .mobile-save {
+    background-color: #4a86e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 0;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  .routinedetail-container .mobile-save {
+    background-color: #3a6fcc;
+  }
+  .routinedetail-container .day-selector {
+    gap: 4px;
+    margin-bottom: 5px;
+  }
+  .routinedetail-container .day-btn {
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 3px;
+  }
+  .routinedetail-container .table-container {
+    margin: 0 auto;
+  }
+  .routinedetail-container .media-container {
+    margin-top: 24px;
+  }
+  .routinedetail-container .media-container h3 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .routinedetail-container .routine-medias {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+  }
+  .routinedetail-container .routine-media-image,
+  .routinedetail-container .routine-media-video {
+    border-radius: 4px;
+  }
+
+  .routinedetail-container .image-modal-content img,
+  .routinedetail-container .image-modal-content video {
+    border-radius: 4px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .routinedetail-container .top-section {
+    margin-bottom: 48px;
+  }
+  .routinedetail-container .routinedetail-header .title {
+    font-size: 24px;
+  }
+  .routinedetail-container .thumbnail {
+    aspect-ratio: 4/1;
+  }
+  .routinedetail-container .profile-section {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .routinedetail-container .profile {
+    width: 40px;
+    height: 40px;
+  }
+  .routinedetail-container .profile .icon {
+    font-size: 20px;
+  }
+  .routinedetail-container .nickname  {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .routinedetail-container .date {
+    font-size: 14px;
+    line-height: 1.1;
+  }
+  .routinedetail-container .group li {
+    min-width: 0;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .routinedetail-container .group li strong {
+    font-size: 16px;
+    width: 100px;
+  }
+  .routinedetail-container li .part,
+  .routinedetail-container li .purpose,
+  .routinedetail-container li .tag {
+    font-size: 14px;
+    padding: 3px 5px;
+    border-radius: 2px;
+    margin-right: 8px;
+  }
+  .routinedetail-container .mobile-save {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+  .routinedetail-container .day-selector {
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+  .routinedetail-container .day-btn {
+    font-size: 16px;
+    padding: 4px 8px;
+  }
+  .routinedetail-container .media-container {
+    margin-top: 48px;
+  }
+  .routinedetail-container .media-container h3 {
+    font-size: 21px;
+    margin-bottom: 6px;
+  }
+  .routinedetail-container .routine-medias {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+  }
+  .routinedetail-container .routine-media-image,
+  .routinedetail-container .routine-media-video {
+    border-radius: 6px;
+  }
+
+  .routinedetail-container .image-modal-content img,
+  .routinedetail-container .image-modal-content video {
+    border-radius: 6px;
+  }
+}

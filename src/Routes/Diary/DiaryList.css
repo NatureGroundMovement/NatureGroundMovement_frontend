@@ -1,0 +1,307 @@
+﻿.diary-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.diary-list .diary-card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #FFF;
+}
+
+.diary-list .diary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.diary-list .diary-header {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ccc;
+}
+
+.diary-list .today-info {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+
+.diary-list .today-info > div {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+}
+
+.diary-list .today-info > div:first-child {
+    padding: 0.4rem 1rem;
+    border-right: 1px solid #ccc;
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    letter-spacing: 1px;
+}
+.diary-list .today-info > div:last-child {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diary-list .today-info > div:last-child span {
+    font-size: 1.1rem;
+    line-height: 1;
+    margin-left: 3px;
+}
+
+.diary-list .diary-author {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    width: 100%;
+}
+
+.diary-list .profile {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.diary-list .profile  img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.diary-list .profile .icon {
+    font-size: 0.9rem;
+}
+
+.diary-list .diary-author .nickname {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.diary-list .diary-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.diary-list .thumbnail {
+    padding: 0.7rem 1rem;
+    width: 100%;
+    height: 180px;
+    overflow: hidden; /* 이미지가 커져도 밖으로 안 튀어나오게 */
+    position: relative;
+}
+
+.diary-list .diary-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.diary-list .diary-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-top: 1px solid #ccc;
+}
+
+.diary-list .diary-title {
+    white-space: nowrap;       /* 줄바꿈 금지 */
+    overflow: hidden;          /* 넘치는 내용 숨김 */
+    text-overflow: ellipsis;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.diary-list .diary-detail .part {
+    background: #f1f1f1;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    padding: 1.5px 4px;
+    color: #444;
+    margin-right: 0.3rem;
+}
+
+.diary-list .diary-detail p {
+  color: #555;
+  margin-top: 0.35rem;
+}
+
+.diary-list .diary-detail strong {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.diary-list .diary-stats {
+    display: flex;
+    font-size: 0.95rem;
+    gap: 0.5rem;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.no-diary {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 100px;
+}
+
+@media (max-width: 1024px) {
+    .no-diary {
+        margin: 32px 0;
+        font-size: 16px;
+    }
+    .diary-list {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 8px;
+        gap: 8px;
+    }
+    .diary-list .today-info > div {
+        font-size: 12px;
+        padding: 4px 8px !important;
+    }
+    .diary-list .diary-mobile-card {
+        display: flex;
+        align-items: flex-start;
+        height: fit-content;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        border-radius: 6px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        background-color: #FFF;
+    }
+    .diary-list .thumbnail {
+        flex: 1;
+        padding: 8px;
+        height: 130px;
+        border-right: 1px solid #ddd;
+    }
+    .diary-list .diary-thumbnail {
+        border-radius: 6px;
+    }
+    .diary-list .diary-mobile-info { 
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        height: 130px;
+        flex: 2;
+    }
+    .diary-list .today-info > div:first-child,
+    .diary-list .today-info > div:last-child {
+        flex-wrap: nowrap;
+        flex: none;
+    }
+    .diary-list .today-info > div:first-child {
+        gap: 2px;
+    }
+    .diary-list .today-info > div:last-child span {
+        margin-left: 3px;
+        font-size: 12px;
+    }
+    .diary-list .diary-author {
+        padding: 4px 8px;
+        gap: 4px;
+    }
+    .diary-list .profile {
+        width: 24px;
+        height: 24px;
+    }
+    .diary-list .profile .icon {
+        font-size: 12px;
+    }
+    .diary-list .diary-author .nickname {
+        font-size: 12px;
+    }
+    .diary-list .diary-detail {
+        padding: 6px 8px;
+        height: 100%;
+    }
+    .diary-list .diary-title {
+        font-size: 14px;
+    }
+    .diary-list .diary-detail p {
+        margin-top: 2px;
+        display: flex;
+        gap: 2px;
+    }
+    .diary-list .diary-detail strong {
+        font-size: 12px;
+    }
+    .diary-list .diary-detail .part {
+        font-size: 10px;
+        padding: 1px 3px;
+        border-radius: 3px;
+    }
+    .diary-list .diary-stats {
+        font-size: 12px;
+        margin-top: 2px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .diary-list .today-info > div:first-child {
+        flex: 2;
+    }
+    .diary-list .today-info > div:last-child {
+        flex: 1;
+    }
+    .diary-list {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 12px;
+        gap: 8px;
+    }
+    .diary-list .diary-mobile-info,
+    .diary-list .thumbnail {
+        height: 160px;
+    }
+    .diary-list .today-info > div {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+    .diary-list .profile {
+        width: 32px;
+        height: 32px;
+    }
+    .diary-list .profile .icon {
+        font-size: 16px;
+    }
+    .diary-list .diary-author .nickname {
+        font-size: 14px;
+    }
+    .diary-list .diary-title {
+        font-size: 16px;
+    }
+    .diary-list .diary-detail p {
+        margin-top: 4px;
+    }
+    .diary-list .diary-detail .part {
+        font-size: 12px;
+        padding: 2px 3px;
+    }
+    .diary-list .diary-stats {
+        font-size: 14px;
+        margin-top: 4px;
+    }
+    .no-diary {
+        margin: 40px 0;
+        font-size: 18px;
+    }
+}

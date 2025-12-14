@@ -1,0 +1,156 @@
+﻿.post-setting {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-setting  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.post-setting .link-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.post-setting .tab {
+    padding: 14px 24px;
+    border-radius: 6px;
+    background-color: #f3f4f6;
+    border: 1px solid #ccc;
+    color: #444;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.25s;
+    text-align: center;
+}
+
+.post-setting .tab:hover {
+    background: #e8eaf1;
+}
+
+.post-setting .tab.active {
+    background-color: #4a86e8;
+    border-color: #4a86e8;
+    color: white;
+    font-weight: 700;
+}
+
+.post-setting .type-tabs {
+    display: flex;
+    gap: 0.7rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+}
+
+.post-setting .type-tabs button {
+    flex: 1;
+    padding: 10px 0;
+    border-radius: 6px;
+    background-color: #f3f4f6;
+    border: 1px solid #ccc;
+    color: #444;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: 0.25s;
+    text-align: center;
+}
+
+.post-setting .type-tabs button:hover {
+    background: #e8eaf1;
+}
+
+.post-setting .type-tabs button.active {
+    background: #dce7fd;
+    border-color: #4a86e8;
+    color: #1f4eb4;
+    font-weight: 700;
+}
+
+.post-setting .diary-list {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.post-setting .diary-title {
+    font-size: 1.05rem;
+}
+
+.post-setting .diary-stats {
+  font-size: 0.95rem;
+}
+
+.post-setting .routine-list {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.post-setting .highlight-list {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+@media (max-width: 1024px) {
+    .post-setting .link-tabs {
+        margin-bottom: 8px;
+    }
+    .post-setting .tab {
+        font-size: 12px;
+        padding: 8px 14px;
+        border-radius: 4px;
+    }
+    .post-setting .type-tabs {
+        gap: 6px;
+        padding-bottom: 8px;
+    }
+    .post-setting .type-tabs button {
+        font-size: 12px;
+        padding: 6px 0;
+        border-radius: 4px;
+    }
+    .post-setting .diary-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .post-setting .diary-title {
+        font-size: 14px;
+    }
+    .post-setting .diary-stats {
+        font-size: 12px;
+    }
+    .post-setting .routine-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .post-setting .highlight-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .post-setting .tab {
+        font-size: 14px;
+        padding: 10px 16px;
+        border-radius: 4px;
+    }
+    .post-setting .link-tabs {
+        margin-bottom: 12px;
+    }
+    .post-setting .type-tabs {
+        gap: 8px;
+        padding-bottom: 12px;
+    }
+    .post-setting .type-tabs button {
+        font-size: 14px;
+        padding: 8px 0;
+        border-radius: 4px;
+    }
+    .post-setting .diary-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .post-setting .diary-title {
+        font-size: 16px;
+    }
+    .post-setting .diary-stats {
+        font-size: 14px;
+    }
+}

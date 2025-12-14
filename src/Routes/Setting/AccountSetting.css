@@ -1,0 +1,351 @@
+﻿.account-setting {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-setting  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.account-setting .profile-picture {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 1.5rem 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-setting .profile {
+    width: 7em;
+    height: 7rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.account-setting .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.account-setting .profile .icon {
+    font-size: 3.5rem;
+}
+
+.account-setting .change-picture-btn {
+    background: #e0e0e0;
+    border: none;
+    padding: 9px 12px;
+    border-radius: 4px;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+
+.account-setting .change-picture-btn:hover {
+    background: #d0d0d0;
+}
+
+.account-setting .nickname-change {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 2.5rem;
+}
+
+.account-setting .description-change {
+    margin-bottom: 3rem;
+}
+
+.account-setting .nickname-change h3,
+.account-setting .description-change h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.account-setting .nickname-change input {
+    font-size: 1.1rem;
+    padding: 0.9rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.account-setting .description-change textarea {
+    font-size: 1.1rem;
+    padding: 0.7rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+    resize: none;
+    width: 100%;
+    min-height: 120px;
+    scrollbar-width: thin;
+
+}
+.account-setting .nickname-change input:focus,
+.account-setting .description-change textarea:focus {
+    border-color: #4a86e8;
+}
+
+.account-setting .toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.account-setting .toggle-switch input {
+    display: none;
+}
+
+.account-setting .toggle-switch .slider {
+    width: 44px;
+    height: 24px;
+    background: #ccc;
+    border-radius: 24px;
+    position: relative;
+    transition: background 0.2s;
+}
+
+.account-setting .toggle-switch .slider::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 3px;
+    left: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+/* ON 상태 */
+.account-setting .toggle-switch input:checked + .slider {
+    background: #4a86e8;
+}
+
+.account-setting .toggle-switch input:checked + .slider::before {
+    transform: translateX(20px);
+}
+
+.account-setting .public-change,
+.account-setting .delete-account {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 2rem;
+}
+
+.account-setting .public-change p {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.account-setting .public-change strong {
+    font-size: 1.1rem;
+}
+
+.account-setting .delete-account strong {
+    font-size: 1.3rem;
+}
+
+.account-setting .save-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2.5rem 0;
+}
+
+.account-setting .save-btn button {
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0.8rem 2.5rem;
+    border-radius: 6px;
+    border: none;
+    background-color: #4a86e8;
+    color: white;
+    cursor: pointer;
+}
+
+.account-setting .save-btn button:hover {
+    background-color: #3b6dc3;
+}
+
+.account-setting .delete-account button {
+    font-size: 1.05rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    background-color: #D32F2F;
+    color: white;
+    cursor: pointer;
+}
+
+.account-setting .delete-account button:hover {
+    background-color: #B71C1C;
+}
+
+@media (max-width: 1024px) {
+    .account-setting .profile-picture {
+        padding: 16px 32px;
+        border-radius: 4px;
+    }
+    .account-setting .profile {
+        width: 64px;
+        height: 64px;
+    }
+    .account-setting .profile .icon {
+        font-size: 32px;
+    }
+    .account-setting .change-picture-btn {
+        font-size: 13px;
+        padding: 6px 8px;
+        border-radius: 3px;
+    }
+    .account-setting .nickname-change {
+        margin: 16px 0 20px;
+    }
+    .account-setting .description-change {
+        margin-bottom: 24px;
+    }
+    .account-setting .nickname-change h3,
+    .account-setting .description-change h3 {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+    .account-setting .nickname-change input {
+        font-size: 14px;
+        padding: 12px;
+        border-radius: 3px;
+    }
+    .account-setting .description-change textarea {
+        font-size: 14px;
+        padding: 8px;
+        border-radius: 3px;
+    }
+    .account-setting .public-change,
+    .account-setting .delete-account {
+        padding: 14px 20px;
+        border-radius: 3px;
+    }
+    .account-setting .public-change p {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+    .account-setting .public-change strong {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .account-setting .toggle-switch {
+        margin-left: 8px;
+    }
+    .account-setting .toggle-switch .slider {
+        width: 36px;
+        height: 20px;
+    }
+    .account-setting .toggle-switch .slider::before {
+        width: 14px;
+        height: 14px;
+    }
+    .account-setting .toggle-switch input:checked + .slider::before {
+        transform: translateX(16px);
+    }
+    .account-setting .save-btn button {
+        font-size: 14px;
+        padding: 8px 20px;
+        border-radius: 4px;
+    }
+    .account-setting .save-btn {
+        margin: 16px 0;
+    }
+    .account-setting .delete-account strong {
+        font-size: 14px;
+    }
+    .account-setting .delete-account button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .account-setting .profile-picture {
+        padding: 20px 42px;
+    }
+    .account-setting .profile {
+        width: 96px;
+        height: 96px;
+    }
+    .account-setting .profile .icon {
+        font-size: 48px;
+    }
+    .account-setting .change-picture-btn {
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+    .account-setting .nickname-change h3,
+    .account-setting .description-change h3 {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+    .account-setting .nickname-change input {
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 4px;
+    }
+    .account-setting .description-change textarea {
+        font-size: 16px;
+        padding: 8px;
+        border-radius: 4px;
+    }
+    .account-setting .public-change,
+    .account-setting .delete-account {
+        padding: 18px 24px;
+        border-radius: 4px;
+    }
+    .account-setting .public-change p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .account-setting .public-change strong {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .account-setting .toggle-switch {
+        margin-left: 12px;
+    }
+    .account-setting .toggle-switch .slider {
+        width: 42px;
+        height: 22px;
+    }
+    .account-setting .toggle-switch .slider::before {
+        width: 16px;
+        height: 16px;
+    }
+    .account-setting .toggle-switch input:checked + .slider::before {
+        transform: translateX(21px);
+    }
+    .account-setting .save-btn button {
+        font-size: 18px;
+        padding: 10px 24px;
+        border-radius: 4px;
+    }
+    .account-setting .save-btn {
+        margin: 24px 0;
+    }
+    .account-setting .delete-account strong {
+        font-size: 18px;
+    }
+    .account-setting .delete-account button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+}

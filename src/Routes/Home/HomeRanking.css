@@ -1,0 +1,267 @@
+﻿.home-ranking {
+    width: 25%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.home-ranking .no-data {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 30px;
+}
+
+.home-ranking h3 {
+    padding: 14px 16px;
+}
+
+.home-ranking .podium {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 0 16px;
+}
+
+.home-ranking .podium-item {
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+.home-ranking .rank-badge {
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    background: black;
+    color: white;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 3;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    z-index: 10;
+}
+
+/* 색상 스타일 */
+.home-ranking .podium-item.gold .rank-badge {
+    background: #FFD700; /* 금색 */
+    color: #000;
+}
+
+.home-ranking .podium-item.silver .rank-badge {
+    background: #C0C0C0;
+    color: #000;
+}
+
+.home-ranking .podium-item.bronze .rank-badge {
+    background: #CD7F32;
+    color: #000;
+}
+
+.home-ranking .profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.home-ranking .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-ranking .profile .icon {
+    font-size: 25px;
+}
+
+.home-ranking .podium-item .profile {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.home-ranking .podium-item .profile:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.home-ranking .podium-item.gold .profile {
+    width: 70px;
+    height: 70px;
+}
+
+.home-ranking .podium-item.gold .profile .icon {
+    font-size: 35px;
+}
+
+.home-ranking .podium-item .name {
+    margin-top: 8px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.home-ranking .podium-item .score {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.home-ranking .rank-list {
+    padding: 12px 16px;
+}
+
+.home-ranking .rank-row {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+.home-ranking .rank-row:first-child {
+    border-top: 1px solid #ddd;
+}
+.home-ranking .rank-row:hover {
+    background-color: #f5f5f5;
+}
+
+.home-ranking .rank-number {
+    width: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.home-ranking .rank-list .profile {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+.home-ranking .rank-list .profile .icon {
+    font-size: 15px;
+}
+
+.home-ranking .rank-name {
+    flex: 1;
+    font-size: 14px;
+}
+
+.home-ranking .rank-score {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .home-ranking {
+        width: 100%;
+    }
+    .home-ranking h3 {
+        padding: 8px 8px;   
+    }
+    .home-ranking .profile {
+        width: 52px;
+        height: 52px;
+    }
+    .home-ranking .profile .icon {
+        font-size: 26px;
+    }
+    .home-ranking .podium-item.gold .profile {
+        width: 72px;
+        height: 72px;
+    }
+    .home-ranking .podium-item.gold .profile .icon {
+        font-size: 36px;
+    }
+    .home-ranking .podium {
+        padding: 0 8px 6px;
+    }
+    .home-ranking .podium-item {
+        padding: 6px;
+    }
+    .home-ranking .rank-badge {
+        font-size: 12px;
+        width: 24px;
+        height: 24px;
+        left: 3px;
+        top: 0px;
+    }
+    .home-ranking .podium-item .name {
+        margin-top: 4px;
+        font-size: 14px;
+    }
+    .home-ranking .podium-item .score {
+        font-size: 12px;
+        opacity: 0.7;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .home-ranking {
+        width: 30%;
+    }
+    .home-ranking h3 {
+        padding: 8px 16px;   
+    }
+    .home-ranking .no-data {
+        font-size: 16px;
+        margin-top: 25px;
+    }
+    .home-ranking .profile {
+        width: 42px;
+        height: 42px;
+    }
+    .home-ranking .profile .icon {
+        font-size: 21px;
+    }
+    .home-ranking .podium-item.gold .profile {
+        width: 56px;
+        height: 56px;
+    }
+    .home-ranking .podium-item.gold .profile .icon {
+        font-size: 28px;
+    }
+    .home-ranking .podium-item .name {
+        margin-top: 4px;
+        font-size: 14px;
+    }
+    .home-ranking .rank-badge {
+        font-size: 12px;
+        width: 24px;
+        height: 24px;
+        left: 7px;
+    }
+    .home-ranking .rank-number {
+        width: 18px;
+        margin-right: 6px;
+    }
+
+    .home-ranking .rank-list .profile {
+        width: 28px;
+        height: 28px;
+        margin-right: 6px;
+    }
+
+    .home-ranking .rank-list .profile .icon {
+        font-size: 14px;
+    }
+
+    .home-ranking .rank-name {
+        font-size: 13px;
+    }
+    .home-ranking .rank-score {
+        font-size: 11px;
+    }
+}

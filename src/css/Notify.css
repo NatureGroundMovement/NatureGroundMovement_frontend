@@ -1,0 +1,13 @@
+﻿.notify-container {
+    height: 100vh;
+    padding: 56px 0 60px;
+}
+
+.notify-container .notify-dropdown {
+    width: 100%;
+}
+
+.notify-container .notify-dropdown .notify-list {
+    overflow-y: auto;
+    height: 100%;
+}

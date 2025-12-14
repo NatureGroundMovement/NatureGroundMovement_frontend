@@ -1,0 +1,233 @@
+﻿.navbar-container {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    z-index: 999;
+    background-color: white;
+}
+
+.navbar-container .navbar-content {
+    max-width: 75rem;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navbar-container .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4a86e8;
+}
+
+/* 카테고리 기본 영역 */
+.navbar-container .category-container {
+  cursor: pointer;
+}
+
+.navbar-container .category-label:hover {
+  color: #007bff;
+}
+
+/* ✅ Navbar 아래 전체 폭 메뉴 */
+.navbar-wrapper .category-bar {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 0.8rem 0;
+  animation: fadeDown 0.25s ease;
+  z-index: 1000;
+}
+
+.navbar-wrapper .category-bar ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-wrapper .category-bar li a {
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navbar-wrapper .category-bar li a:hover {
+  color: #007bff;
+}
+
+.navbar-container .search {
+  position: relative;
+}
+
+.navbar-container .search input {
+    font-size: 1.05rem;
+    padding: 0.8rem 1rem;
+    border-radius: 28px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 30rem;
+}
+
+.navbar-container .search input:focus {
+  border: 1px solid #4a86e8;
+}
+
+.navbar-container .search button {
+  border: none;
+  background: none;
+}
+
+.navbar-container .search .search-icon {
+  position: absolute;
+  top: calc(50% - 9.6px);
+  right: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.navbar-container .login-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+    border-radius: 6px;
+    color: white;
+    border: none;
+    background-color: #4a86e8;
+    cursor: pointer;
+}
+
+.navbar-container .login-btn:hover {
+    background-color: #3b6dc3;
+}
+
+.navbar-container .my-page {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navbar-container .upload-btn {
+  font-size: 0.95rem;
+  padding: 8px 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.navbar-container .upload-btn span {
+  font-size: 0.95rem;
+}
+.navbar-container .upload-btn:hover {
+  background-color: #d0d0d0;
+}
+
+.navbar-container .bell-btn {
+  font-size: 1.6rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.navbar-container .unread-dot {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 6px;
+  height: 6px;
+  background: red;
+  border-radius: 50%;
+}
+
+.navbar-container .notification-menu {
+    position: absolute;
+    top: 40px;
+    right: -10px;
+    background-color: white;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.navbar-container .profile {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.navbar-container .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navbar-container .profile .icon {
+    font-size: 1.3rem;
+}
+
+.navbar-container .dropdown-menu,
+.navbar-container .upload-menu {
+    position: absolute;
+    top: 45px;
+    right: -5px;
+    background-color: white;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    width: 160px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.navbar-container .upload-menu {
+  right: -50px;
+  width: 140px;
+}
+
+.navbar-container .dropdown-menu ul,
+.navbar-container .upload-menu ul {
+  list-style: none;
+  padding: 0.4rem 0;
+  margin: 0;
+}
+
+.navbar-container .dropdown-menu li,
+.navbar-container .upload-menu li {
+  padding: 11px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 18px;
+  color: #333;
+}
+
+.navbar-container .upload-menu li span,
+.navbar-container .dropdown-menu li span {
+  font-size: 16px;
+}
+.navbar-container .dropdown-menu li:hover,
+.navbar-container .upload-menu li:hover {
+  background-color: #dedede;
+}

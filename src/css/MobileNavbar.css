@@ -1,0 +1,119 @@
+﻿.mobile-navbar {
+    position: relative;
+}
+
+/* 상단 헤더 고정 */
+.mobile-navbar .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px; /* 원하는 높이 */
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    z-index: 998;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.mobile-navbar .header h1 {
+    font-size: 1.6rem;
+    color: #4a86e8;
+}
+
+/* 하단 네비 고정 */
+.mobile-navbar .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* 원하는 높이 */
+    background: #fff;
+    border-top: 1px solid #ddd;
+    z-index: 998;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 24px;
+}
+.mobile-navbar .footer > div {
+    cursor: pointer;
+}
+
+.mobile-navbar .footer div:nth-child(3) {
+    font-size: 36px;
+}
+
+.mobile-navbar .footer .profile {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.mobile-navbar .footer .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-navbar .footer .profile .icon {
+    font-size: 18px;
+}
+
+.mobile-navbar .upload-dropdown {
+    position: absolute;
+    top: -180px;
+    right: -45px;
+    background-color: white;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    width: 130px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.mobile-navbar .upload-dropdown ul {
+  list-style: none;
+  padding: 0.4rem 0;
+  margin: 0;
+}
+
+.mobile-navbar .upload-dropdown li {
+  padding: 9px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 16px;
+  color: #333;
+}
+
+.mobile-navbar .upload-menu li span {
+  font-size: 14px;
+}
+.mobile-navbar .upload-dropdown li:hover {
+  background-color: #dedede;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .mobile-navbar .upload-dropdown {
+    top: -205px;
+    right: -55px;
+    width: 150px;
+  }
+  .mobile-navbar .upload-dropdown li {
+    font-size: 18px;
+    padding: 11px 12px;
+    gap: 10px;
+  }
+}

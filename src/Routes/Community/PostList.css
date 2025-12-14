@@ -1,0 +1,127 @@
+﻿.post-list {
+    list-style: none;
+    scrollbar-width: thin;
+}
+
+.post-list li {
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 4rem;
+    background-color: #fff;
+}
+
+.post-list li > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.post-list li > div:first-child {
+    margin-bottom: 0.4rem;
+}
+
+.post-list .post-title {
+    flex: 1;
+    font-size: 1.2rem;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.post-list .post-tags {
+  flex: 1;
+  display: block; /* ✅ flex → block으로 변경 */
+  text-align: end; /* ✅ 오른쪽 정렬 유지 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 태그 */
+.post-list .post-tags .tag {
+  display: inline-block; /* ✅ inline-block으로 한 줄에 나열 */
+  background: #d6e4fa;
+  color: #4a86e8;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 4px;
+  white-space: nowrap;
+  margin-left: 0.3rem;
+}
+
+.post-list .post-reactions {
+    font-size: 0.95rem;
+    display: flex;
+    gap: 0.6rem;
+}
+
+.post-list .post-date {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.post-list li:hover {
+    background-color: #f5f5f5;
+}
+
+.no-post {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 100px;
+}
+
+@media (max-width: 1024px) {
+    .post-list li {
+        padding: 8px 28px;
+    }
+    .post-list li > div {
+        gap: 2rem;
+    }
+    .post-list li > div:first-child {
+        margin-bottom: 6px;
+    }
+    .post-list .post-title {
+        font-size: 14px;
+    }
+    .post-list .post-reactions {
+        font-size: 11px;
+    }
+    .post-list .post-date {
+        font-size: 13px;
+    }
+    .post-list .post-tags .tag {
+        font-size: 10px;
+        padding: 2px 3px;
+        border-radius: 3px;
+    }
+    .no-post {
+        font-size: 14px;
+        margin: 32px 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .post-list li {
+        padding: 12px 3rem;
+    }
+    .post-list .post-title {
+        font-size: 18px;
+    }
+    .post-list .post-reactions {
+        font-size: 14px;
+    }
+    .post-list .post-date {
+        font-size: 16px;
+    }
+    .post-list .post-tags .tag {
+        font-size: 14px;
+        padding: 3px 6px;
+    }
+    .no-post {
+        font-size: 18px;
+        margin: 40px 0;
+    }
+}

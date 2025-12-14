@@ -1,0 +1,84 @@
+﻿.profile-list {
+    list-style: none;
+}
+
+.profile-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 5rem;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.profile-list li:hover {
+    background-color: #f5f5f5;
+}
+
+.profile-list li > div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.profile-list .profile {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.profile-list .profile .icon {
+    font-size: 2rem;
+}
+
+.profile-list .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-list p {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .profile-list li {
+        padding: 8px 24px;
+    }
+    .profile-list .profile {
+        width: 40px;
+        height: 40px;
+    } 
+    .profile-list .profile .icon {
+        font-size: 20px;
+    }
+    .profile-list p {
+        font-size: 14px;
+        margin-left: 8px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .profile-list li {
+        padding: 12px 42px;
+    }
+    .profile-list .profile {
+        width: 56px;
+        height: 56px;
+    } 
+    .profile-list .profile .icon {
+        font-size: 28px;
+    }
+    .profile-list p {
+        font-size: 18px;
+        margin-left: 12px;
+    }
+}

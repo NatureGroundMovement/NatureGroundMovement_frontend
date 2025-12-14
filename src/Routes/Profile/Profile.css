@@ -1,0 +1,36 @@
+﻿.profile-container {
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: calc(1.5rem + 70px) 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-container .show-routine .routine-note p {
+    border: 1px solid #aac3e8;
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+    background-color: #f8faff;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        height: 100vh;
+        padding: calc(1rem + 56px) 1rem calc(60px + 1rem);
+        overflow-y: auto;
+    }
+
+    .profile-container .show-routine .routine-note p {
+        border-radius: 4px;
+        padding: 8px 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .profile-container {
+        height: 100vh;
+        padding: calc(1rem + 56px) 1rem calc(60px + 1rem);
+        overflow-y: auto;
+    }
+}

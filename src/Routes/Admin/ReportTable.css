@@ -1,0 +1,191 @@
+﻿.report-table-container .delete-btn {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.6rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #D32F2F;
+    cursor: pointer;
+    color: white;
+    margin: 0.5rem 0;
+}
+
+.report-table-container .delete-btn:hover {
+    background-color: #B71C1C;
+}
+
+.delete-btn.disabled,
+.delete-btn.disabled:hover {
+    background: #e0e0e0;
+    color: #999;
+}
+
+.report-table-container .report-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* 헤더 */
+.report-table-container .report-table th {
+  background: #d9d9d9;
+  padding: 12px 18px;
+  font-weight: 700;
+  font-size: 1rem;
+  border-bottom: 1px solid #ccc;
+  color: #444;
+  border-right: 1px solid #fff;
+}
+
+.report-table-container .report-table th:nth-child(2),
+.report-table-container .report-table th:nth-child(4) {
+  width: 15%;
+}
+.report-table-container .report-table th:nth-child(3) {
+    width: 25%;
+}
+.report-table-container .report-table th:last-child {
+    flex: 1;
+    text-align: start;
+    border-right: none;
+}
+
+/* 데이터 셀 */
+.report-table-container .report-table td {
+  padding: 8px 18px;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  white-space: pre;
+  border-right: 1px solid #ccc;
+}
+
+.report-table-container .report-table td:last-child {
+    text-align: start;
+    border-right: none;
+}
+
+/* row hover */
+.report-table-container .report-table tr:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.report-table-container .report-table .check-box {
+    width: 5%;
+}
+.report-table-container .report-table .check-box input {
+    width: 16px;
+    height: 16px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.report-table-container .report-table .reporter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.report-table-container .report-table .reporter p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.report-table-container .report-table .profile {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.report-table-container .report-table .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.report-table-container .report-table .profile .icon {
+    font-size: 1.1rem;
+}
+
+.no-reports {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+    .report-table-container .delete-btn {
+        margin: 6px 0;
+        font-size: 14px;
+        border-radius: 3px;
+    }
+    .report-table-container .report-table th {
+        font-size: 12px;
+        padding: 8px;
+        white-space: nowrap;
+    }
+    .report-table-container .report-table th:last-child,
+    .report-table-container .report-table td:last-child {
+        text-align: center;
+    }
+    .report-table-container .report-table td {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+    .report-table-container .report-table .reporter {
+        gap: 3px;
+    }
+    .report-table-container .report-table .check-box {
+        width: 3%;
+    }
+    .report-table-container .report-table .check-box input {
+        width: 12px;
+        height: 12px;
+    }
+    .report-table-container .report-table .profile {
+        width: 24px;
+        height: 24px;
+    }
+    .report-table-container .report-table .profile .icon {
+        font-size: 12px;
+    }
+    .no-reports {
+        font-size: 14px;
+        margin: 32px 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .report-table-container .report-table th {
+        font-size: 16px;
+        padding: 10px 16px;
+        white-space: nowrap;
+    }
+    .report-table-container .report-table td {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+    .report-table-container .report-table .profile {
+        width: 32px;
+        height: 32px;
+    }
+    .report-table-container .report-table .profile .icon {
+        font-size: 16px;
+    }
+    .no-reports {
+        font-size: 18px;
+        margin: 40px 0;
+    }
+}

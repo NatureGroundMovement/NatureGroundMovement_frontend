@@ -1,0 +1,15 @@
+﻿.home-container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding-top: 70px;
+    padding: 70px 0 2rem;
+    background-color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .home-container {
+        padding: calc(56px + 1rem) 1rem calc(1rem + 60px);
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
